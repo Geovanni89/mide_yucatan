@@ -13,20 +13,18 @@
     <!-- ================== BEGIN BASE CSS STYLE ================== -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <link href="<?=base_url();?>plugins/bootstrap3/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="<?=base_url();?>plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="<?=base_url();?>plugins/animate/animate.min.css" rel="stylesheet" />
     <link href="<?=base_url();?>css/forum/style.css" rel="stylesheet" />
+    <link href="<?=base_url();?>css/parallax/style.css" rel="stylesheet" />
     <link href="<?=base_url();?>css/commerce/style.css" rel="stylesheet" />
     <link href="<?=base_url();?>css/forum/style-responsive.min.css" rel="stylesheet" />
     <link href="<?=base_url();?>css/forum/theme/default.css" id="theme" rel="stylesheet" />
     <link href="<?=base_url();?>css/parallax/style.min.css" rel="stylesheet" />
 	<link href="<?=base_url();?>css/parallax/style-responsive.min.css" rel="stylesheet" />
+	<link href="<?=base_url();?>css/parallax/theme/default.css" id="theme" rel="stylesheet" />
     <link href="<?=base_url();?>css/general/general.css" rel="stylesheet" />
-    <style type="text/css">
-        table,td {
-    	border: 5px solid #e0e5e3;
-    }
-    </style>
-	
-
+    <link href="<?=base_url();?>css/general/font-awesome.css" rel="stylesheet" />
 
     <!-- ================== END BASE CSS STYLE ================== -->
     
@@ -34,14 +32,65 @@
     <script src="<?=base_url();?>plugins/pace/pace.min.js"></script>
     <!-- ================== END BASE JS ================== -->
 </head>
-<body style="background-color:#eff2ef;">
+<body style="background-color: #eff2ef;">
+    <!-- begin #header -->
+    <div id="header" class="header navbar navbar-default navbar-fixed-top">
+        <!-- begin container -->
+        <div class="container">
+            <!-- begin navbar-header -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html" class="navbar-brand">
+                    <span class="navbar-logo"></span>
+                    <span class="brand-text">
+                        Support Forum
+                    </span>
+                </a>
+            </div>
+            <!-- end navbar-header -->
+            <!-- begin #header-navbar -->
+            <div class="collapse navbar-collapse" id="header-navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <form class="navbar-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Buscar indicador" />
+                            </div>
+                        </form>
+                    </li>                    
+                </ul>
+            </div>
+            <!-- end #header-navbar -->
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end #header -->
     
-    <?php include('header.php'); ?>
-
-
-
-
-    <br><br><br>
+    <!-- begin search-banner -->
+    <div class="search-banner has-bg">
+        <!-- begin bg-cover -->
+        <div class="bg-cover">
+            <img src="<?=base_url();?>img/cover/cover-1.jpg" alt="" />
+        </div>
+        <!-- end bg-cover -->
+        <!-- begin container -->
+        <div class="container">
+            <ul class="popular-tags fondotitulo">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Documentos del PED</a></li>
+                <li><a href="#">Versión Electrónica</a></li>
+                <li><a href="#">COPLEDEY</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end search-banner -->
+<br><br><br>
 
 
 
@@ -53,7 +102,7 @@
         <div class="col-md-8">
             <!--Primera subcolumna imagen-->
             <div class="col-md-2">
-                <img width="100px" src="<?=base_url();?>img/sei_img/indicador_ejemplo.png" alt="">
+                <img width="100px" src="<?=base_url();?>img/B_elementos/indicador_ejemplo.png" alt="">
             </div>
             <!--fin de la primera subcolumna-->
             <!--Segunda subcolumna texto-->
@@ -91,26 +140,24 @@
              <div class="col-md-12"><a style="font-size: 12px; color: black; font-weight: bold;">Fuente:&#32;</a><a style="font-size: 12px; color: black;">Sistema de cuentas nacionales. INEG</a></div>
             <!--/footer-->
             <!--Valor historico-->
-            <div class="col-md-12"><br>
+            <div class="col-md-12"><br><br><br>
             <span style="color: #322564; left: 408.533px; top: 443.882px; font-size: 18.6667px; font-weight: bold; font-family: sans-serif; transform: scaleX(0.909925);">
             <center>VALOR HIST&#211;RICO</center>
             </span>
-            <br>
-           
             </div>
             <!--/valor historico-->
 
             <!--tabla de datos anuales-->
-            <div class="col-md-12" style="background-color: black; padding: 0px;">
-            <table width="100%" style="border-radius: 15px !important;">
+            <div class="col-md-12" style="background-color: #e0e5e3; padding: 3px; border-radius: 5px;">
+            <table style="width:100%; border-collapse: collapse;">
                 <tr style="background-color: white; color: black;">
-                    <td><center><a style="font-size: 12px; color: black;">2013</a></center></th>
-                    <td><center><a style="font-size: 12px; color: black;">2014</a></center></th>
-                    <td><center><a style="font-size: 12px; color: black;">2015</a></center></th>
-                    <td><center><a style="font-size: 12px; color: black;">2016</a></center></th>
-                    <td><center><a style="font-size: 12px; color: black;">2017</a></center></th>
-                    <td><center><a style="font-size: 12px; color: black;">2018</a></center></th>
-                    <td><center><a style="font-size: 12px; color: black;">2019</a></center></th>
+                    <th><center><a style="font-size: 12px; color: black; border-color: black; border-weigth: 5px;">2013</a></center></th>
+                    <th><center><a style="font-size: 12px; color: black;">2014</a></center></th>
+                    <th><center><a style="font-size: 12px; color: black;">2015</a></center></th>
+                    <th><center><a style="font-size: 12px; color: black;">2016</a></center></th>
+                    <th><center><a style="font-size: 12px; color: black;">2017</a></center></th>
+                    <th><center><a style="font-size: 12px; color: black;">2018</a></center></th>
+                    <th><center><a style="font-size: 12px; color: black;">2019</a></center></th>
                 </tr>
                 <tr style="background-color: white; padding-bottom: 5px; padding-top: 5px;">
                     <td><center><a style="font-size: 12px; color: black;">123.45</a></center></td>
@@ -124,152 +171,8 @@
             </table> 
             </div>
             <!--/tabla de datos anuales-->
-           <div class="col-md-12"><br>
             
-            
-            </div>    
-            <!--detalles del indicador-->
-            <div class="col-md-12 detalles">
-            <div class="col-md-12"><a style="color: black; font-size: 16px; font-family: sans-serif;">Detalles del indicador</a></div>
-            <div class="col-md-12" style="background-color: white; border-top-left-radius: 10px; border-top-right-radius: 10px;">
-            <div class="col-md-6">
-                <a class="textoindi1">Identificador:</a>
-            </div>
-            <div class="col-md-6">
-                <a class="textoindi2">TM2-13</a>
-            </div>
-            </div>
-
-            <div class="col-md-12" style="background-color: white;">
-            <div class="col-md-6">
-            <a class="textoindi1">Tipo de indicador:</a>
-            </div>
-            <div class="col-md-6">
-            <a  class="textoindi2">Producto</a>
-            </div>
-            </div>
-            <div class="col-md-12" style="background-color: white;">
-            <div class="col-md-6">
-            <a class="textoindi1">Nivel del indicador:</a>
-            </div>
-            <div class="col-md-6">
-            <a  class="textoindi2">Nivel: 2-Sectorial</a>
-            </div>
-            </div>
-            <div class="col-md-12" style="background-color: white;">
-            <div class="col-md-6">
-            <a class="textoindi1">Dependencia que reporta MIDE:</a>
-            </div>
-            <div class="col-md-6">
-            <a  class="textoindi2">Unidad Estatal de Protecci?n Civil y Bomberos Jalisco</a>
-            </div>
-            </div>
-            <div class="col-md-12" style="background-color: white;">
-            <div class="col-md-6">
-            <a class="textoindi1">Periodicidad:</a>
-            </div>
-            <div class="col-md-6">
-            <a  class="textoindi2">Mensual</a>
-            </div>
-            </div>
-            <div class="col-md-12" style="background-color: white; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
-            <div class="col-md-6">
-            <a class="textoindi1">A?o base:</a>
-            </div>
-            <div class="col-md-6">
-            <a  class="textoindi2">2010</a>
-            </div>
-            </div>
-
-            </div>
-            <!--/detalles del indicador-->
-
-            <div class="col-md-12">
-                <br>
-            </div>
-            <!--alineacion-->
-
-            <div class="col-md-12 detalles">
-            <div class="col-md-12"><a style="color: black; font-size: 16px; font-family: sans-serif;">Alineaci?n al Plan Estatal de Desarrollo y Metas</a>
-            </div>
-            <div class="col-md-12" style="background-color: white; border-radius: 10px;">
-            <!--col 1-->
-            <div class="col-md-9">
-            <!--componente 1-->
-            <div class="col-md-12">
-            <div class="col-md-2"><a class="textoindi3">Prop?sito:</a></div>
-            <div class="col-md-10"><a class="textoindi4">Territorio y medio ambiente sustentable</a></div>
-            </div>
-            <!--/componente 1-->
-            <!--componente 2-->
-            <div class="col-md-12">
-            <div class="col-md-2"><a class="textoindi3">Programa:</a></div>
-            <div class="col-md-4"><a class="textoindi4">5.- Protecci?n civil</a></div>
-            <div class="col-md-2"><a class="textoindi3">Tema:</a></div>
-            <div class="col-md-4"><a class="textoindi4">5.- Protecci?n civil</a></div>
-            </div>
-            <!--/componente 2-->
-            <!--componente 3-->
-            <div class="col-md-12">
-            <div class="col-md-5"><a class="textoindi3">Objetivo de desarrollo:</a></div>
-            <div class="col-md-7" style="padding: 0px;"><a class="textoindi4">Disminuir los factores de riesgo y mejorar la atenci?n ante la ocurrencia de un desastre.</a></div>
-            </div>
-            <!--/componente 3-->
-            </div>
-            <!--/col1-->
-            <!--col2-->
-            <div class="col-md-3">
-                <div class="col-md-12"><br></div>
-            <!--componente col2 -> 1 -->
-            <div class="col-md-12" style="background-color: green;">
-            <div class="col-md-4"><a>META</a></div>
-            <div class="col-md-4">
-            <div class="col-md-12"><a>2018</a></div>
-            <div class="col-md-12"><a>258,978</a></div>
-            </div>
-            <div class="col-md-4">
-            <div class="col-md-12"><a>2030</a></div>
-            <div class="col-md-12"><a>369,969</a></div>
-            </div>
-            </div>
-            <!--/componente col2 -> 1 -->
-            </div>
-            <!--/col2-->
-            <!--footer-->
-            <div class="col-md-12">
-                <a class="textoindi4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpa.</a>
-            </div>
-            <!--/footer-->
-            </div>
-            </div>
-
-            <!--/alineacion-->
-            <!--Metodologia-->
-            <div class="col-md-12">
-                <br>
-            </div>
-            <!--alineacion-->
-
-            <div class="col-md-12 detalles">
-            <div class="col-md-12"><a style="color: black; font-size: 16px; font-family: sans-serif;">Metodolog?a</a>
-            </div>
-            <div class="col-md-12" style="background-color: white;  border-radius: 10px;">
-            <div class="col-md-12">
-            <div class="col-md-3"><a>Metodolog?a:</a></div>
-            <div class="col-md-9"><a>Se reportan las acciones preventivas realizadas por Base Central y las Bases Regionales de esta UEPCB, como son: recorridos, monitoreos, fen?menos analizados, revisiones en campo, exposiciones en materia de protecci?n civil, reuniones de coordinaci?n interinstitucional, verificaciones y acciones en operativos preventivos, en eventos de concentraci?n masiva, entre otros.</a></div>
-            </div>
-            <div class="col-md-12">
-            <div class="col-md-3"><a>F?rmula:</a></div>
-            <div class="col-md-9"><a>APSR=?_j1^125APSR j</a></div>
-            </div>
-            <div class="col-md-12">
-            <div class="col-md-3"><a>Variable:</a></div>
-            <div class="col-md-9"><a>APSR=Acciones Preventivas en Sitios de Riesgo APSR=Acciones Preventivas en Sitios de Riesgo en el municipio j</a></div>
-            </div>
-            </div>
-            </div>
-            <!--Metodologia-->
-            </div>
+        </div>
         <!--fin de la primera columna-->
         <!--Segunda columna-->
         <div class="col-md-4">
@@ -277,7 +180,7 @@
             <div class="col-md-12" style="background-color: #523fa0">
             <center>
                 <span style="left: 1022.42px; top: 222.361px; font-size: 15.0544px; font-family: sans-serif; transform: scaleX(1.23434); color:white;">DESCARGAR FICHA INDICADOR</span>
-                <img src="<?=base_url();?>img/sei_img/i_pdf.png" width="30%" alt=""><br>
+                <img src="<?=base_url();?>img/B_elementos/i_pdf.png" width="30%" alt=""><br>
                 <button type="submit">Descargar</button>
             </center>
             </div>
@@ -291,7 +194,7 @@
                 <div class="col-md-12"><span style="left: 1022.42px; top: 222.361px; font-size: 15.0544px; font-family: sans-serif; transform: scaleX(1.23434); color:white;">DATOS ABIERTOS</span></div>
                 <div class="col-md-4">
                 <center>
-                <img src="<?=base_url();?>img/sei_img/i_json.png" width="50%" alt="">
+                <img src="<?=base_url();?>img/B_elementos/i_json.png" width="50%" alt="">
                 <br>
                 <br>
                 <button type="submit" style="background-color: #123262; border-radius: 10px; padding-top:0;"><span style="font-size: 10px; color:white;">Descargar</span></button>
@@ -300,7 +203,7 @@
             <!--tercera-->
             <div class="col-md-4">
                 <center>
-                <img src="<?=base_url();?>img/sei_img/i_excel.png" width="50%" alt="">
+                <img src="<?=base_url();?>img/B_elementos/i_excel.png" width="50%" alt="">
                 <br>
                 <br>
                 <button type="submit" style="background-color: #123262; border-radius: 10px; padding-top:0;"><span style="font-size: 10px; color:white;">Descargar</span></button>
@@ -310,7 +213,7 @@
             <!--cuarta-->
             <div class="col-md-4">
                 <center>
-                <img src="<?=base_url();?>img/sei_img/i_csv.png" width="50%" alt="">
+                <img src="<?=base_url();?>img/B_elementos/i_csv.png" width="50%" alt="">
                 <br>
                 <br>
                 <button type="submit" style="background-color: #123262; border-radius: 10px; padding-top:0;"><span style="font-size: 10px; color:white;">Descargar</span></button>
@@ -326,10 +229,89 @@
 </div>
 <!--fin del contenedor-->
 
-<br>
-<br>    
-     
-   <?php include('footer.php'); ?>  
+
+
+
+
+
+     <!-- begin #footer -->
+     <div id="footer" class="footer">
+        <!-- begin container -->
+        <div class="container">
+            <!-- begin row -->
+            <div class="row">
+                <!-- begin col-4 -->
+                <div class="col-md-4">
+                    <!-- begin section-container -->
+                    <div class="section-container">
+                        <h4>SEI</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices ipsum in elementum porttitor. 
+                            Cras porttitor fermentum nisl non elementum. Nulla in placerat libero. Nulla pharetra purus eget diam dictum 
+                            ullamcorper nec et eros. Suspendisse consectetur nulla ut volutpat aliquam.
+                        </p>
+                    </div>
+                    <!-- end section-container -->
+                </div>
+                <!-- end col-4 -->
+                <!-- begin col-4 -->
+                <div class="col-md-4">
+                    <!-- begin section-container -->
+                    <div class="section-container">
+                        <h4>Latest Post</h4>
+                        <ul class="latest-post">
+                            <li>
+                                <h4 class="title"><a href="#">Consectetur adipiscing elit ultrices</a></h4>
+                                <p class="time">yesterday 10:42am</p>
+                            </li>
+                            <li>
+                                <h4 class="title"><a href="#">Fusce ultrices ipsum porttitor</a></h4>
+                                <p class="time">10/04/2015</p>
+                            </li>
+                            <li>
+                                <h4 class="title"><a href="#">Cras porttitor fermentum adipiscing</a></h4>
+                                <p class="time">02/04/2015</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end section-container -->
+                </div>
+                <!-- end col-4 -->
+                <!-- begin col-4 -->
+                <div class="col-md-4">
+                    <!-- begin section-container -->
+                    <div class="section-container">
+                        <h4>New Users</h4>
+                        <ul class="new-user">
+                            <li><a href="#"><img src="<?=base_url();?>img/user/user-1.jpg" alt="" /></a></li>
+                            <li><a href="#"><img src="<?=base_url();?>img/user/user-2.jpg" alt="" /></a></li>
+                            <li><a href="#"><img src="<?=base_url();?>img/user/user-3.jpg" alt="" /></a></li>
+                            <li><a href="#"><img src="<?=base_url();?>img/user/user-4.jpg" alt="" /></a></li>
+                            <li><a href="#"><img src="<?=base_url();?>img/user/user-5.jpg" alt="" /></a></li>
+                            <li><a href="#"><img src="<?=base_url();?>img/user/user-6.jpg" alt="" /></a></li>
+                            <li><a href="#"><img src="<?=base_url();?>img/user/user-7.jpg" alt="" /></a></li>
+                            <li><a href="#"><img src="<?=base_url();?>img/user/user-8.jpg" alt="" /></a></li>
+                            <li><a href="#"><img src="<?=base_url();?>img/user/user-9.jpg" alt="" /></a></li>
+                        </ul>
+                    </div>
+                    <!-- end section-container -->
+                </div>
+                <!-- end col-4 -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end #footer -->
+    <!-- begin #footer-copyright -->
+    <div id="footer-copyright" class="footer-copyright">
+        <div class="container">
+            &copy; 2014 - 2017 SeanTheme All Right Reserved
+            <a href="#">Contact Us</a> 
+            <a href="#">Knowledge Base</a>
+        </div>
+    </div>
+    <!-- end #footer-copyright -->    
     
     <!-- ================== BEGIN BASE JS ================== -->
     <script src="<?=base_url();?>plugins/jquery/jquery-3.2.1.min.js"></script>
