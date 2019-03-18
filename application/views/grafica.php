@@ -16,13 +16,11 @@
     <link href="<?=base_url();?>plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link href="<?=base_url();?>plugins/animate/animate.min.css" rel="stylesheet" />
     <link href="<?=base_url();?>css/forum/style.css" rel="stylesheet" />
-    <link href="<?=base_url();?>css/parallax/style.css" rel="stylesheet" />
+  
     <link href="<?=base_url();?>css/commerce/style.css" rel="stylesheet" />
     <link href="<?=base_url();?>css/forum/style-responsive.min.css" rel="stylesheet" />
     <link href="<?=base_url();?>css/forum/theme/default.css" id="theme" rel="stylesheet" />
-    <link href="<?=base_url();?>css/parallax/style.min.css" rel="stylesheet" />
-    <link href="<?=base_url();?>css/parallax/style-responsive.min.css" rel="stylesheet" />
-    <link href="<?=base_url();?>css/parallax/theme/default.css" id="theme" rel="stylesheet" />
+ 
     <link href="<?=base_url();?>css/general/general.css" rel="stylesheet" />
     <link href="<?=base_url();?>css/general/font-awesome.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="<?=base_url();?>plugins/chosen/chosen.css">
@@ -79,13 +77,11 @@
                                 </select>
                                 
                             </div>
-                            <div class="col-md-2">                                
-                                <button type="button" class="btn btn-inverse">Agregar indicador</button>                                
+                            <div class="col-md-1">                                
+                            <button type="button" style="background-color: #432764;" class="btn btn-primary btn-xs">Agregar indicador</button>                               
                             </div>
                             <div class="col-md-2">
-                                <button type="button" class="btn btn-inverse">Limpiar</button>   
-                            </div>
-                            
+                            <button type="button" style="background-color: #432764;" class="btn btn-primary btn-xs">Limpiar</button>                           
                         </div>
                         </center><!-- end info-container -->
                     </li>
