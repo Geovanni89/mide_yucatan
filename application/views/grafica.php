@@ -61,26 +61,23 @@
                     
                         <!-- begin info-container -->
                         <div class="row">
-                            <div class="col-md-2">
-                                <select name="proposito" id="proposito" class="chosen-select">
+                            <div class="col-md-6" style="padding: 0;">
+                                <select name="proposito" id="proposito">
                                     <option value="" disable>Proposito PED</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                 </select>
+                                &nbsp;
                                 
-                            </div>
-                            <div class="col-md-2">
-                                <select name="indicador" id="indicador" class="chosen-select">
+                                <select name="indicador" id="indicador">
                                     <option value="" disable>Seleccionar indicador</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                 </select>
-                                
-                            </div>
-                            <div class="col-md-1">                                
+                                &nbsp;
+                                                          
                             <button type="button" style="background-color: #432764;" class="btn btn-primary btn-xs">Agregar indicador</button>                               
-                            </div>
-                            <div class="col-md-2">
+                            &nbsp;
                             <button type="button" style="background-color: #432764;" class="btn btn-primary btn-xs">Limpiar</button>                           
                         </div>
                         </center><!-- end info-container -->
