@@ -39,7 +39,7 @@
                 <!-- begin col-9 -->
                 <div class="col-md-8">
                     <!-- begin section-container -->
-                    <div class="section-container">
+                    <div class="section-container" style="margin-bottom: 0px; padding-bottom: 0px;">
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3306.9584799260138!2d-118.49437019999998!3d34.019276700000006!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2a4cedd1266ff%3A0x1ffe328381544853!2sGoogle+Inc!5e0!3m2!1sen!2s!4v1435718319426" allowfullscreen=""></iframe>
                         </div>
