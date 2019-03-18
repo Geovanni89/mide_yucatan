@@ -93,7 +93,7 @@
                             <option value="1">1</option>
                             <option value="2">2</option>
                             </select>
-                            <button type="submit" onclick="mostrar1()"><i class="fa fa-microsoft"></i></button>
+                            <button type="submit" onclick="mostrar1()"><i class="fa fa-square"></i></button>
                             <button type="submit" onclick="mostrar2()"><i class="fa fa-bars"></i></button>                            
                         </div>
                         </center><!-- end info-container -->
@@ -121,7 +121,7 @@
                     <li>
                         <!-- begin media -->
                         <div class="media">
-                            <img src="<?=base_url();?>img/B_elementos/indicador_ejemplo.png" alt="" />
+                            <img src="<?=base_url();?>img/sei_img/indicador_ejemplo.png" alt="" />
                         </div>
                         <!-- end media -->
                         <!-- begin info-container -->
@@ -174,7 +174,7 @@
                     <li>
                         <!-- begin media -->
                         <div class="media">
-                            <img src="<?=base_url();?>img/B_elementos/indicador_ejemplo.png" alt="" />
+                            <img src="<?=base_url();?>img/sei_img/indicador_ejemplo.png" alt="" />
                         </div>
                         <!-- end media -->
                         <!-- begin info-container -->
@@ -226,7 +226,7 @@
                     <li>
                         <!-- begin media -->
                         <div class="media">
-                            <img src="<?=base_url();?>img/B_elementos/indicador_ejemplo.png" alt="" />
+                            <img src="<?=base_url();?>img/sei_img/indicador_ejemplo.png" alt="" />
                         </div>
                         <!-- end media -->
                         <!-- begin info-container -->
@@ -278,7 +278,7 @@
                     <li>
                         <!-- begin media -->
                         <div class="media">
-                            <img src="<?=base_url();?>img/B_elementos/indicador_ejemplo.png" alt="" />
+                            <img src="<?=base_url();?>img/sei_img/indicador_ejemplo.png" alt="" />
                         </div>
                         <!-- end media -->
                         <!-- begin info-container -->
@@ -330,11 +330,9 @@
 
     <!--listado-->
 
-    <div class="content" id="cuadricula" style='display:none;'>
-        <!-- begin container -->
-        <div class="container">
+    
             <!-- begin #pricing -->
-        <div id="pricing" class="content" data-scrollview="true">
+        <div class="content" id="cuadricula" style='display:none;' data-scrollview="true">
             <!-- begin container -->
             <div class="container">
                               
@@ -347,7 +345,7 @@
                         </div><div class="dentro">
                             <div class="row">
                             <div class="media">
-                            <img src="<?=base_url();?>img/B_elementos/indicador_ejemplo.png" width="100px" alt="" />
+                            <img src="<?=base_url();?>img/sei_img/indicador_ejemplo.png" width="100px" alt="" />
                             </div>
                             <br>
                             <div class="col-md-7">
@@ -382,7 +380,7 @@
                         </div><div class="dentro">
                             <div class="row">
                             <div class="media">
-                            <img src="<?=base_url();?>img/B_elementos/indicador_ejemplo.png" width="100px" alt="" />
+                            <img src="<?=base_url();?>img/sei_img/indicador_ejemplo.png" width="100px" alt="" />
                             </div>
                             <br>
                             <div class="col-md-7">
@@ -417,7 +415,7 @@
                         </div><div class="dentro">
                             <div class="row">
                             <div class="media">
-                            <img src="<?=base_url();?>img/B_elementos/indicador_ejemplo.png" width="100px" alt="" />
+                            <img src="<?=base_url();?>img/sei_img/indicador_ejemplo.png" width="100px" alt="" />
                             </div>
                             <br>
                             <div class="col-md-7">
@@ -450,9 +448,7 @@
             <!-- end container -->
         </div>
         <!-- end #pricing -->
-        </div>
-        <!-- end container -->
-    </div>
+     
     <!-- end content -->
      
     
