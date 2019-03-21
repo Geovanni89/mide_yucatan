@@ -154,7 +154,7 @@
     <!-- begin content -->
     <div class="content" style="background-color: #EDEFEC">
         <!-- begin container -->
-        <div class="container">
+        <div class="container" style="margin-left: 4%;">
 
             <!-- begin #about -->
             <div id="about" class="content" data-scrollview="true">
@@ -162,15 +162,45 @@
                 <div class="container" data-animation="true" data-animation-type="fadeInDown">
                     <h2 class="content-title">Matriz DESCA</h2>
                     <!-- begin row -->
-                    <div class="row">
                         <!-- begin col-4 -->
-                        <div class="col-md-12 col-sm-12">
                             <!-- begin about -->
-                            <img src="<?= base_url(); ?>img/sei_img/matriz.png" style="width: 100%;">
                             <!-- end about -->
-                        </div>
+                            <img src="<?= base_url(); ?>img/sei_img/matriz.png" id="map-image" style="width: 1349px; height: auto;" alt="" usemap="#map" />
+                            <map name="map">
+                                <area shape="circle" coords="113, 612, 30" />
+                                <area shape="circle" coords="390, 610, 30" />
+                                <area shape="circle" coords="634, 609, 30" />
+                                <area shape="circle" coords="1103, 610, 30" />
+                                <area shape="circle" coords="861, 611, 30" />
+                                <area shape="circle" coords="1257, 203, 30" />
+                                <area shape="circle" coords="1257, 300, 30" />
+                                <area shape="circle" coords="1257, 394, 30" />
+                                <area shape="circle" coords="1031, 483, 30" />
+                                <area shape="circle" coords="1031, 393, 30" />
+                                <area shape="circle" coords="1029, 300, 30" />
+                                <area shape="circle" coords="1030, 205, 30" />
+                                <area shape="circle" coords="93, 531, 30" />
+                                <area shape="circle" coords="93, 419, 30" />
+                                <area shape="circle" coords="93, 314, 30" />
+                                <area shape="circle" coords="92, 205, 30" />
+                                <area shape="circle" coords="318, 206, 30" />
+                                <area shape="circle" coords="318, 311, 30" />
+                                <area shape="circle" coords="319, 419, 30" />
+                                <area shape="circle" coords="319, 529, 30" />
+                                <area shape="circle" coords="401, 423, 30" />
+                                <area shape="circle" coords="401, 316, 30" />
+                                <area shape="circle" coords="628, 314, 30" />
+                                <area shape="circle" coords="627, 417, 30" />
+                                <area shape="circle" coords="723, 419, 30" />
+                                <area shape="circle" coords="725, 313, 30" />
+                                <area shape="circle" coords="951, 420, 30" />
+                                <area shape="circle" coords="952, 314, 30" />
+                                <area shape="circle" coords="953, 209, 30" />
+                                <area shape="circle" coords="723, 207, 30" />
+                                <area shape="circle" coords="627, 207, 30" />
+                                <area shape="circle" coords="399, 205, 30" />
+                            </map>
                         <!-- end col-4 -->
-                    </div>
                     <!-- end row -->
                 </div>
                 <!-- end container -->
@@ -315,7 +345,9 @@
 
     <!-- ================== BEGIN BASE JS ================== -->
     <script src="<?= base_url(); ?>plugins/jquery/jquery-3.2.1.min.js"></script>
-    <script src="<?= base_url(); ?>plugins/bootstrap3/js/bootstrap.min.js"></script>
+    <script src="<?= base_url(); ?>plugins/bootstrap3/js/bootstrap.min.js"></script>    
+    <script src="<?= base_url(); ?>js/imageMapResizer.min.js"></script>
+                            
     <!--[if lt IE 9]>
         <script src="assets/crossbrowserjs/html5shiv.js"></script>
         <script src="assets/crossbrowserjs/respond.min.js"></script>
@@ -328,6 +360,7 @@
     <script>
         $(document).ready(function() {
             App.init();
+            $("map").imageMapResize();
         });
     </script>
 </body>
