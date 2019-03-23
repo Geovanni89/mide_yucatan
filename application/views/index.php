@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if !IE]><!-->
@@ -99,7 +100,11 @@
         <!-- end container -->
     </div>
     <!-- end content -->
-
+    <pre>
+        
+<?php //print_r($datos_json); 
+echo $datos_json; ?>
+    </pre>
     <!-- begin content -->
     <div class="content">
         <!-- begin container -->
