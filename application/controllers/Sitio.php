@@ -35,32 +35,20 @@ class Sitio extends CI_Controller {
 
 		foreach ($ejes as $veje) {
 				$count_politica = 0;		
-				//$datos_json['eje'.$veje->id_eje]['id'] = $veje->id_eje;
-				//$datos_json['eje'.$veje->id_eje]['nombre'] = $veje->descripcion;			
 				$politicas = $json->politicas($veje->id_eje);
-				//$datos_json['eje'.$veje->id_eje]['numeroTemas'] = count($politicas);
 				$datos_json[] = array('id'=>$veje->id_eje, 'nombre'=>$veje->descripcion, 'numeroTemas'=>count($politicas));
 				
 
 				foreach ($politicas as $vpol) {
 					$count_obj = 0;
-					//$datos_json['eje'.$veje->id_eje]['temas']['tema'.$vpol->id_politica]['id'] = $vpol->id_politica;
-					//$datos_json['eje'.$veje->id_eje]['temas']['tema'.$vpol->id_politica]['nombre'] = $vpol->descripcion;
 					$objetivos = $json->objetivos($vpol->id_politica);
-					//$datos_json['eje'.$veje->id_eje]['temas']['tema'.$vpol->id_politica]['numeroObjetivos'] = count($objetivos);
-					$datos_json[$count_eje]['temas'][] = array('id'=>$vpol->id_politica , 'nombre'=>$vpol->descripcion , 'numeroObjetivos'=>count($objetivos)); 
-					
+					$datos_json[$count_eje]['temas'][] = array('id'=>$vpol->id_politica , 'nombre'=>$vpol->descripcion , 'numeroObjetivos'=>count($objetivos));
 
 					foreach ($objetivos as $vobj) {
-						//$datos_json['eje'.$veje->id_eje]['temas']['tema'.$vpol->id_politica]['objetivos']['obj'.$vobj->id_objetivo]['id'] = $vobj->id_objetivo;
-						//$datos_json['eje'.$veje->id_eje]['temas']['tema'.$vpol->id_politica]['objetivos']['obj'.$vobj->id_objetivo]['nombre'] = $vobj->descripcion;
 						$indicadores = $json->indicadores($vobj->id_objetivo);
 						$datos_json[$count_eje]['temas'][$count_politica]['objetivos'][] = array('id'=>$vobj->id_objetivo , 'nombre'=>$vobj->descripcion ,'numeroIndicadores'=>count($indicadores)); //
-						//$datos_json['eje'.$veje->id_eje]['temas']['tema'.$vpol->id_politica]['objetivos']['obj'.$vobj->id_objetivo]['numeroIndicadores'] = count($indicadores);
 						foreach ($indicadores as $vind) {
 							$datos_json[$count_eje]['temas'][$count_politica]['objetivos'][$count_obj]['indicadores'][] = array('id' => $vind->id_indicador, 'nombre' => $vind->nombre_indicador, 'nombrePDF' =>  $vind->pdf,); //['id'] = $vind->id_indicador;
-							//$datos_json['eje'.$veje->id_eje]['temas']['tema'.$vpol->id_politica]['objetivos']['obj'.$vobj->id_objetivo]['indicadores'][]['nombre'] = $vind->nombre_indicador;
-							//$datos_json['eje'.$veje->id_eje]['temas']['tema'.$vpol->id_politica]['objetivos']['obj'.$vobj->id_objetivo]['indicadores'][]['nombrePDF'] = $vind->pdf;
 						}
 						$count_obj++;
 
