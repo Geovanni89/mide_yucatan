@@ -22,7 +22,6 @@ class M_json extends CI_Model {
 	}
 
 	
-
 	public function politicas($id_eje)
 	{
 		$this->db->select('p.id_politica,p.descripcion');

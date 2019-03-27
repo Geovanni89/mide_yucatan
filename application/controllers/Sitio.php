@@ -105,4 +105,11 @@ class Sitio extends CI_Controller {
 	{
 		$this->load->view('datos_abiertos');
 	}
+
+	public function graficas_ped()
+	{
+		$datos['id'] = $this->input->get('id');
+		$this->load->view('graficas_ped',$datos);
+	}
+
 }
