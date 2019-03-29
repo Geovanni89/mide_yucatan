@@ -67,8 +67,12 @@
                             <!--Posted By <a href="#">admin</a> <span class="divider">|</span> 10 June 2015 <span class="divider">|</span> <a href="#">Sports</a>, <a href="#">Mountain</a>, <a href="#">Bike</a> <span class="divider">|</span> 2 Comments-->
                         </div>
                         <!-- begin post-image -->
-                        <div>
-                            <iframe src="<?=base_url();?>graficas/examples/javascript/<?php echo $id; ?>" height="500" width="100%"></iframe>
+                        <div align="center">
+                            <iframe id="iframe_graf" src="<?=base_url();?>graficas/examples/javascript/<?php echo $id; ?>" height="500" width="100%"></iframe>
+                            <div id="div_giro" class="row" style="display: none;">
+                                <h5>Para visualizar las gráficas deberá activar la rotación automática y colorcar su dispositivo en posición horizontal</h5>
+                                <div class="col-lg-12"><img src="<?=base_url();?>img/sei_img/rotate2.gif" style="max-width: 100%; min-height: 350px;"></div>
+                            </div>
                         </div>
                         <!-- end post-image -->
                         <!-- begin post-desc -->
@@ -105,16 +109,44 @@
     <!-- ================== END BASE JS ================== -->
     
     <script>
-        $(document).ready(function() {
+        $(document).ready(function() {            
             App.init();
+            giro();
+        });
 
+        function giro() {
             var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
             if(isMobile) {
                 //((container  display:block;
                 //transform: rotate(0deg);
-                //document.getElementById("container").style.transform = "rotate(90deg)";              
+                //document.getElementById("container").style.transform = "rotate(90deg)";
+                if(window.screen.orientation.type=="landscape-primary") {
+                    //document.getElementById('iframe_graf').style.display = "";
+                    //document.getElementById('div_giro').style.display = "none";                    
+                }
+                else if(window.screen.orientation.type="portrait-primary") {
+                    document.getElementById('iframe_graf').style.display = "none";
+                    document.getElementById('div_giro').style.display = "";
+                    //document.getElementById("container").style.transform = "rotate(90deg)";
+
+                }
+            }            
+        }
+
+        window.addEventListener("orientationchange", function() {
+            //alert("the orientation of the device is now " + screen.orientation.angle);
+            if(window.screen.orientation.type=="landscape-primary") {
+                //document.location.reload(true);
+                document.getElementById('iframe_graf').style.display = "";
+                document.getElementById('div_giro').style.display = "none";
             }
-        });        
+            else if(window.screen.orientation.type="portrait-primary") {
+                document.getElementById('iframe_graf').style.display = "none";
+                document.getElementById('div_giro').style.display = "";
+            }
+        });
+
+
     </script>
 </body>
 </html>

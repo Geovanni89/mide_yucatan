@@ -7,7 +7,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>SEI | Yucatán</title>
+    <title>SSED | Yucatán</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
     <meta content="" name="description" />
     <meta content="" name="author" />
@@ -159,52 +159,55 @@ echo $datos_json; ?>
     <!-- begin content -->
     <div class="content" style="background-color: #EDEFEC">
         <!-- begin container -->
-        <div class="container" style="margin-left: 4%;">
+        <div class="container">
 
             <!-- begin #about -->
             <div id="about" class="content" data-scrollview="true">
                 <!-- begin container -->
                 <div class="container" data-animation="true" data-animation-type="fadeInDown">
                     <h2 class="content-title">Matriz DESCA</h2>
+                    <div class="row">
+                            <img src="<?= base_url(); ?>img/sei_img/matriz.png" id="map-image" style="width: 100%; height: auto;" alt="" usemap="#map" />
+                            <map name="map">
+                                <area shape="circle" coords="647, 606, 30" />
+                                <area shape="circle" coords="449, 609, 30" />
+                                <area shape="circle" coords="667, 463, 29" />
+                                <area shape="circle" coords="1289, 461, 30" />
+                                <area shape="circle" coords="823, 460, 31" />
+                                <area shape="circle" coords="1139, 301, 29" />
+                                <area shape="circle" coords="1140, 383, 33" />
+                                <area shape="circle" coords="1141, 461, 29" />
+                                <area shape="circle" coords="1000, 607, 30" />
+                                <area shape="circle" coords="1067, 462, 29" />
+                                <area shape="circle" coords="1068, 383, 29" />
+                                <area shape="circle" coords="1067, 301, 32" />
+                                <area shape="circle" coords="1180, 598, 27" />
+                                <area shape="circle" coords="834, 608, 31" />
+                                <area shape="circle" coords="596, 386, 31" />
+                                <area shape="circle" coords="1289, 534, 31" />
+                                <area shape="circle" coords="597, 542, 29" />
+                                <area shape="circle" coords="425, 464, 33" />
+                                <area shape="circle" coords="426, 382, 30" />
+                                <area shape="circle" coords="425, 543, 30" />
+                                <area shape="circle" coords="597, 463, 30" />
+                                <area shape="circle" coords="427, 302, 32" />
+                                <area shape="circle" coords="668, 305, 31" />
+                                <area shape="circle" coords="668, 386, 30" />
+                                <area shape="circle" coords="822, 385, 31" />
+                                <area shape="circle" coords="824, 301, 33" />
+                                <area shape="circle" coords="901, 462, 29" />
+                                <area shape="circle" coords="902, 384, 32" />
+                                <area shape="circle" coords="902, 301, 31" />
+                                <area shape="circle" coords="1289, 301, 34" />
+                                <area shape="circle" coords="1289, 380, 32" />
+                                <area shape="circle" coords="595, 303, 32" />
+                            </map>
+                            
+                    </div>
                     <!-- begin row -->
                         <!-- begin col-4 -->
                             <!-- begin about -->
                             <!-- end about -->
-                            <img src="<?= base_url(); ?>img/sei_img/matriz.png" id="map-image" style="width: 1349px; height: auto;" alt="" usemap="#map" />
-                            <map name="map">
-                                <area shape="circle" coords="113, 612, 30" />
-                                <area shape="circle" coords="390, 610, 30" />
-                                <area shape="circle" coords="634, 609, 30" />
-                                <area shape="circle" coords="1103, 610, 30" />
-                                <area shape="circle" coords="861, 611, 30" />
-                                <area shape="circle" coords="1257, 203, 30" />
-                                <area shape="circle" coords="1257, 300, 30" />
-                                <area shape="circle" coords="1257, 394, 30" />
-                                <area shape="circle" coords="1031, 483, 30" />
-                                <area shape="circle" coords="1031, 393, 30" />
-                                <area shape="circle" coords="1029, 300, 30" />
-                                <area shape="circle" coords="1030, 205, 30" />
-                                <area shape="circle" coords="93, 531, 30" />
-                                <area shape="circle" coords="93, 419, 30" />
-                                <area shape="circle" coords="93, 314, 30" />
-                                <area shape="circle" coords="92, 205, 30" />
-                                <area shape="circle" coords="318, 206, 30" />
-                                <area shape="circle" coords="318, 311, 30" />
-                                <area shape="circle" coords="319, 419, 30" />
-                                <area shape="circle" coords="319, 529, 30" />
-                                <area shape="circle" coords="401, 423, 30" />
-                                <area shape="circle" coords="401, 316, 30" />
-                                <area shape="circle" coords="628, 314, 30" />
-                                <area shape="circle" coords="627, 417, 30" />
-                                <area shape="circle" coords="723, 419, 30" />
-                                <area shape="circle" coords="725, 313, 30" />
-                                <area shape="circle" coords="951, 420, 30" />
-                                <area shape="circle" coords="952, 314, 30" />
-                                <area shape="circle" coords="953, 209, 30" />
-                                <area shape="circle" coords="723, 207, 30" />
-                                <area shape="circle" coords="627, 207, 30" />
-                                <area shape="circle" coords="399, 205, 30" />
-                            </map>
                         <!-- end col-4 -->
                     <!-- end row -->
                 </div>

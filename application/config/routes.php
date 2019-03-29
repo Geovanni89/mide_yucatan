@@ -55,10 +55,11 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['documentos'] = 'sitio/documentos';
 $route['indicadornac'] = 'sitio/indicador_nacional';
-$route['registro'] = 'sitio/registro';
-$route['contacto'] = 'sitio/contacto';
+$route['contacto'] = 'sitio/registro';
+$route['copledey'] = 'sitio/copledey';
 $route['indicadores'] = 'sitio/lista_indicadores';
 $route['grafica'] = 'sitio/grafica';
 $route['datos'] = 'sitio/datos';
 $route['graf'] = 'sitio/graficas_ped/';
 $route['app'] = "sitio/app";
+$route['indicadores/ind'] = 'C_indicadores/ind/';

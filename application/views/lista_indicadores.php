@@ -5,7 +5,7 @@
 <!--<![endif]-->
 <head>
     <meta charset="utf-8" />
-    <title>SEI | Yucatán</title>
+    <title>SSED | Yucatán</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
     <meta content="" name="description" />
     <meta content="" name="author" />
@@ -109,69 +109,22 @@
         <!-- begin container -->
         <div class="container">
             <!-- begin panel-forum -->
-            
-            <div class="panel panel-forum">
+            <?php 
+                foreach ($ind as $vind) {
+                    echo 'id: '.$vind->id_indicador;
+                    
+            ?>
+                <div class="panel panel-forum">
                 <!-- begin panel-heading -->
                 <div class="panel-heading">
-                    <h4 class="panel-title">Variaci&oacute;n porcentual del producto interno bruto estatal</h4>
+                    <h4 class="panel-title"><a target="_blank" href="<?=base_url();?>indicadores/ind?id=<?=$vind->id_indicador;?>"><?=$vind->nombre_indicador;?></a></h4>
                 </div>
                 <!-- end panel-heading -->
                 <!-- begin forum-list -->
                 <ul class="forum-list">
                     <li>
-                        <!-- begin media -->
-                        <div class="media">
-                            <img src="<?=base_url();?>img/sei_img/indicador_ejemplo.png" alt="" />
-                        </div>
-                        <!-- end media -->
-                        <!-- begin info-container -->
-                        <div class="info-container row">
-                            <div class="col-md-4">
-                                <h4 class="title"><a class="texto">L&iacute;nea base o valor de referencia</a></h4>
-                                <p class="desc">
-                                $249613.573
-                                </p>
-                            </div>
-                            <div class="col-md-2">
-                                <h4 class="title"><a class="texto">Unidad de medida</a></h4>
-                                <p class="desc">
-                                Millones de pesos
-                                </p>
-                            </div>
-                            <div class="col-md-2">
-                                <h4 class="title"><a class="texto">Fuente</a></h4>
-                                <p class="desc">
-                                Sistema de cuentas nacionales. INEGI
-                                </p>
-                            </div>
-                            <div class="col-md-2">
-                                <h4 class="title"><a class="texto">A&ntilde;o</a></h4>
-                                <p class="desc">
-                                2017
-                                </p>
-                            </div>
-                            <div class="col-md-2">
-                                <h4 class="title texto"><a class="texto">Periodicidad</a></h4>
-                                <p class="desc">
-                                Anual
-                                </p>
-                            </div>
-                        </div>
-                        <!-- end info-container -->
-                    </li>
-                </ul>
-                <!-- end forum-list -->
-            </div>
 
-            <div class="panel panel-forum">
-                <!-- begin panel-heading -->
-                <div class="panel-heading">
-                    <h4 class="panel-title">Variaci&oacute;n porcentual del producto interno bruto estatal</h4>
-                </div>
-                <!-- end panel-heading -->
-                <!-- begin forum-list -->
-                <ul class="forum-list">
-                    <li>
+
                         <!-- begin media -->
                         <div class="media">
                             <img src="<?=base_url();?>img/sei_img/indicador_ejemplo.png" alt="" />
@@ -182,13 +135,13 @@
                             <div class="col-md-4">
                                 <h4 class="title"><a class="texto">L&iacute;nea base o valor de referencia</a></h4>
                                 <p class="desc">
-                                $249613.573
+                                <?=$vind->valor;?>
                                 </p>
                             </div>
                             <div class="col-md-2">
                                 <h4 class="title"><a class="texto">Unidad de medida</a></h4>
                                 <p class="desc">
-                                Millones de pesos
+                                <?=$vind->unidad;?>
                                 </p>
                             </div>
                             <div class="col-md-2">
@@ -198,15 +151,15 @@
                                 </p>
                             </div>
                             <div class="col-md-2">
-                                <h4 class="title"><a class="texto">A&ntilde;o</a></h4>
+                                <h4 class="title"><a class="texto">Año</a></h4>
                                 <p class="desc">
-                                2017
+                                <?=$vind->fecha;?>
                                 </p>
                             </div>
                             <div class="col-md-2">
                                 <h4 class="title texto"><a class="texto">Periodicidad</a></h4>
                                 <p class="desc">
-                                Anual
+                                <?=$vind->periodicidad;?>
                                 </p>
                             </div>
                         </div>
@@ -215,110 +168,9 @@
                 </ul>
                 <!-- end forum-list -->
             </div>
-            <div class="panel panel-forum">
-                <!-- begin panel-heading -->
-                <div class="panel-heading">
-                    <h4 class="panel-title">Variaci&oacute;n porcentual del producto interno bruto estatal</h4>
-                </div>
-                <!-- end panel-heading -->
-                <!-- begin forum-list -->
-                <ul class="forum-list">
-                    <li>
-                        <!-- begin media -->
-                        <div class="media">
-                            <img src="<?=base_url();?>img/sei_img/indicador_ejemplo.png" alt="" />
-                        </div>
-                        <!-- end media -->
-                        <!-- begin info-container -->
-                        <div class="info-container row">
-                            <div class="col-md-4">
-                                <h4 class="title"><a class="texto">L&iacute;nea base o valor de referencia</a></h4>
-                                <p class="desc">
-                                $249613.573
-                                </p>
-                            </div>
-                            <div class="col-md-2">
-                                <h4 class="title"><a class="texto">Unidad de medida</a></h4>
-                                <p class="desc">
-                                Millones de pesos
-                                </p>
-                            </div>
-                            <div class="col-md-2">
-                                <h4 class="title"><a class="texto">Fuente</a></h4>
-                                <p class="desc">
-                                Sistema de cuentas nacionales. INEGI
-                                </p>
-                            </div>
-                            <div class="col-md-2">
-                                <h4 class="title"><a class="texto">A&ntilde;o</a></h4>
-                                <p class="desc">
-                                2017
-                                </p>
-                            </div>
-                            <div class="col-md-2">
-                                <h4 class="title texto"><a class="texto">Periodicidad</a></h4>
-                                <p class="desc">
-                                Anual
-                                </p>
-                            </div>
-                        </div>
-                        <!-- end info-container -->
-                    </li>
-                </ul>
-                <!-- end forum-list -->
-            </div>
-            <div class="panel panel-forum">
-                <!-- begin panel-heading -->
-                <div class="panel-heading">
-                    <h4 class="panel-title">Variaci&oacute;n porcentual del producto interno bruto estatal</h4>
-                </div>
-                <!-- end panel-heading -->
-                <!-- begin forum-list -->
-                <ul class="forum-list">
-                    <li>
-                        <!-- begin media -->
-                        <div class="media">
-                            <img src="<?=base_url();?>img/sei_img/indicador_ejemplo.png" alt="" />
-                        </div>
-                        <!-- end media -->
-                        <!-- begin info-container -->
-                        <div class="info-container row">
-                            <div class="col-md-4">
-                                <h4 class="title"><a class="texto">L&iacute;nea base o valor de referencia</a></h4>
-                                <p class="desc">
-                                $249613.573
-                                </p>
-                            </div>
-                            <div class="col-md-2">
-                                <h4 class="title"><a class="texto">Unidad de medida</a></h4>
-                                <p class="desc">
-                                Millones de pesos
-                                </p>
-                            </div>
-                            <div class="col-md-2">
-                                <h4 class="title"><a class="texto">Fuente</a></h4>
-                                <p class="desc">
-                                Sistema de cuentas nacionales. INEGI
-                                </p>
-                            </div>
-                            <div class="col-md-2">
-                                <h4 class="title"><a class="texto">A&ntilde;o</a></h4>
-                                <p class="desc">
-                                2017
-                                </p>
-                            </div>
-                            <div class="col-md-2">
-                                <h4 class="title texto"><a class="texto">Periodicidad</a></h4>
-                                <p class="desc">
-                                Anual
-                                </p>
-                            </div>
-                        </div>
-                        <!-- end info-container -->
-                    </li>
-                </ul>
-                <!-- end forum-list -->
-            </div>            
+            <?php
+                }
+            ?>
         </div>
         <!-- end container -->
     </div>
@@ -448,6 +300,22 @@
             <!-- end container -->
         </div>
         <!-- end #pricing -->
+
+        <div class="section-container">
+            <!-- begin pagination -->
+            <div class="pagination-container text-center">
+                <ul class="pagination m-t-0 m-b-0">
+                    <li class="disabled"><a href="javascript:;">Prev</a></li>
+                    <li class="active"><a href="javascript:;">1</a></li>
+                    <li><a href="javascript:;">2</a></li>
+                    <li><a href="javascript:;">3</a></li>
+                    <li><span class="text">...</span></li>
+                    <li><a href="javascript:;"><?=(($total%10)==0) ? ($total/10) : ceil($total/10);?></a></li>
+                    <li><a href="javascript:;">Next</a></li>
+                </ul>
+            </div>
+            <!-- end pagination -->
+        </div>
      
     <!-- end content -->
      

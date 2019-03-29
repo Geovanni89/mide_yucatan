@@ -1,3 +1,16 @@
+<style type="text/css">
+    .popular-tags > li > a:hover, .popular-tags > li > a:focus {
+        text-decoration: none !important;
+        color: #432764 !important;
+        border-color: #100505 !important;
+        box-shadow: 0px 0px 12px 0px !important;
+    }
+
+.popular-tags > li > a.active {
+    box-shadow: inset 0px 0px 12px 0px !important;
+}
+
+</style>
 <!-- begin #header -->
     <div id="header" class="header navbar navbar-default navbar-fixed-top">
         <!-- begin container -->
@@ -12,7 +25,7 @@
                 <a href="<?=base_url();?>" class="navbar-brand">
                     <span class="navbar-logo"></span>
                     <span class="brand-text">
-                        Yucatán | SEI
+                        Yucatán | SSED
                     </span>
                 </a>
             </div>
@@ -39,12 +52,12 @@
     <div class="search-banner has-bg">        
         <!-- begin container -->
         <div class="container">
-            <ul class="popular-tags">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Documentos del PED</a></li>
-                <li><a href="#">Versión Electrónica</a></li>
-                <li><a href="#">COPLEDEY</a></li>
-                <li><a href="#">Contacto</a></li>
+            <ul class="popular-tags">                
+                <li><a href="<?=base_url();?>">Inicio</a></li>
+                <li><a href="<?=base_url();?>documentos">Documentos del PED</a></li>
+                <li><a href="<?=base_url();?>indicadores">Versión Electrónica</a></li>
+                <li><a href="<?=base_url();?>copledey">COPLEDEY</a></li>
+                <li><a href="<?=base_url();?>contacto">Contacto</a></li>
             </ul>
         </div>
         <!-- end container -->

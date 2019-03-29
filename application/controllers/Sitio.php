@@ -24,6 +24,7 @@ class Sitio extends CI_Controller {
 		parent::__construct();
 		$this->load->helper('url');		
 		$this->load->model('M_json');
+		$this->load->model('M_indicadores');
 	}
 
 	public function index()
@@ -81,14 +82,18 @@ class Sitio extends CI_Controller {
 		$this->load->view('registro');
 	}
 
-	public function contacto()
+	public function copledey()
 	{
-		$this->load->view('contacto');
+		$this->load->view('copledey');
 	}
 
 	public function lista_indicadores()
 	{
-		$this->load->view('lista_indicadores');
+		$pag = 0;
+		$ind = new M_indicadores();		
+		$datos['ind'] = $ind->indicadores($pag);
+		$datos['total'] = $ind->total_ind();
+		$this->load->view('lista_indicadores',$datos);
 	}
 
 	public function datos_indicador()
@@ -110,6 +115,11 @@ class Sitio extends CI_Controller {
 	{
 		$datos['id'] = $this->input->get('id');
 		$this->load->view('graficas_ped',$datos);
+	}
+
+	public function app()
+	{
+		$this->load->view('app');
 	}
 
 }
