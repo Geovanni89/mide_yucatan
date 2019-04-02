@@ -93,8 +93,8 @@
                             <option value="1">1</option>
                             <option value="2">2</option>
                             </select>
-                            <button type="submit" onclick="mostrar1()"><i class="fa fa-square"></i></button>
-                            <button type="submit" onclick="mostrar2()"><i class="fa fa-bars"></i></button>                            
+                            <button type="button" onclick="mostrar('cuadricula');"><i class="fa fa-square"></i></button>
+                            <button type="button" onclick="mostrar('lista');"><i class="fa fa-bars"></i></button>                            
                         </div>
                         </center><!-- end info-container -->
                     </li>
@@ -107,7 +107,7 @@
     <!--cuadricula-->
     <div class="content" id="lista" style='display:block;'>
         <!-- begin container -->
-        <div class="container">
+        <div class="container" id="contenedor_indicadores">
             <!-- begin panel-forum -->
             <?php 
                 foreach ($ind as $vind) {
@@ -175,143 +175,35 @@
         <!-- end container -->
     </div>
     <!-- end content -->
-
-
-   
-
-
     <!--listado-->
-
-    
-            <!-- begin #pricing -->
-        <div class="content" id="cuadricula" style='display:none;' data-scrollview="true">
-            <!-- begin container -->
-            <div class="container">
-                              
-                <!-- begin pricing-table -->
-                <div class="pricing-table col-md-12">
-                    <div class="col-md-4" data-animation="true" data-animation-type="fadeInUp">
-                        <div class="pricing-container dentro">
-                        <div class="tarjetita">
-                            <center><h4>Variaci&oacute;n porcentual del producto interno bruto estatal</h4></center>
-                        </div><div class="dentro">
-                            <div class="row">
-                            <div class="media">
-                            <img src="<?=base_url();?>img/sei_img/indicador_ejemplo.png" width="100px" alt="" />
-                            </div>
-                            <br>
-                            <div class="col-md-7">
-                                <a class="texto2">L&iacute;nea base o valor de referencia</a>
-                                <a class="desc" style="font-size: 9px; color: black;">$249613.573</a>
-                            </div>
-                            <div class="col-md-5">
-                                <a class="texto2">Unidad de medida</a>
-                                <a class="desc" style="font-size: 9px; color: black;">Millones de pesos</a>
-                            </div>
-                            <div class="col-md-12">
-                            <br>
-                            
-                            <p><a class="texto2" style="text-align: left;">Fuente&nbsp;</a><a class="desc" style="font-size: 9px; color: black;">Sistemas nacionales. INEGI</a></p>
-                            </div>
-                            <div class="col-md-6">
-                                <a class="texto2">A&ntilde;o</a>
-                                <a class="desc" style="font-size: 9px; color: black;">2017</a>
-                            </div>
-                            <div class="col-md-6">
-                                <a class="texto2">Periodicidad</a>
-                                <a class="desc" style="font-size: 9px; color: black;">Anual</a>
-                                <br><br>
-                            </div>
-                            </div></div>
-                        </div>
-                    </div>
-                    <div class="col-md-4" data-animation="true" data-animation-type="fadeInUp">
-                        <div class="pricing-container dentro">
-                        <div class="tarjetita">
-                            <center><h4>Variaci&oacute;n porcentual del producto interno bruto estatal</h4></center>
-                        </div><div class="dentro">
-                            <div class="row">
-                            <div class="media">
-                            <img src="<?=base_url();?>img/sei_img/indicador_ejemplo.png" width="100px" alt="" />
-                            </div>
-                            <br>
-                            <div class="col-md-7">
-                                <a class="texto2">L&iacute;nea base o valor de referencia</a>
-                                <a class="desc" style="font-size: 9px; color: black;">$249613.573</a>
-                            </div>
-                            <div class="col-md-5">
-                                <a class="texto2">Unidad de medida</a>
-                                <a class="desc" style="font-size: 9px; color: black;">Millones de pesos</a>
-                            </div>
-                            <div class="col-md-12">
-                            <br>
-                            
-                            <p><a class="texto2" style="text-align: left;">Fuente&nbsp;</a><a class="desc" style="font-size: 9px; color: black;">Sistemas nacionales. INEGI</a></p>
-                            </div>
-                            <div class="col-md-6">
-                                <a class="texto2">A&ntilde;o</a>
-                                <a class="desc" style="font-size: 9px; color: black;">2017</a>
-                            </div>
-                            <div class="col-md-6">
-                                <a class="texto2">Periodicidad</a>
-                                <a class="desc" style="font-size: 9px; color: black;">Anual</a>
-                                <br><br>
-                            </div>
-                            </div></div>
-                        </div>
-                    </div>
-                    <div class="col-md-4" data-animation="true" data-animation-type="fadeInUp">
-                        <div class="pricing-container dentro">
-                        <div class="tarjetita">
-                            <center><h4>Variaci&oacute;n porcentual del producto interno bruto estatal</h4></center>
-                        </div><div class="dentro">
-                            <div class="row">
-                            <div class="media">
-                            <img src="<?=base_url();?>img/sei_img/indicador_ejemplo.png" width="100px" alt="" />
-                            </div>
-                            <br>
-                            <div class="col-md-7">
-                                <a class="texto2">L&iacute;nea base o valor de referencia</a>
-                                <a class="desc" style="font-size: 9px; color: black;">$249613.573</a>
-                            </div>
-                            <div class="col-md-5">
-                                <a class="texto2">Unidad de medida</a>
-                                <a class="desc" style="font-size: 9px; color: black;">Millones de pesos</a>
-                            </div>
-                            <div class="col-md-12">
-                            <br>
-                            
-                            <p><a class="texto2" style="text-align: left;">Fuente&nbsp;</a><a class="desc" style="font-size: 9px; color: black;">Sistemas nacionales. INEGI</a></p>
-                            </div>
-                            <div class="col-md-6">
-                                <a class="texto2">A&ntilde;o</a>
-                                <a class="desc" style="font-size: 9px; color: black;">2017</a>
-                            </div>
-                            <div class="col-md-6">
-                                <a class="texto2">Periodicidad</a>
-                                <a class="desc" style="font-size: 9px; color: black;">Anual</a>
-                                <br><br>
-                            </div>
-                            </div></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end container -->
-        </div>
-        <!-- end #pricing -->
 
         <div class="section-container">
             <!-- begin pagination -->
             <div class="pagination-container text-center">
-                <ul class="pagination m-t-0 m-b-0">
-                    <li class="disabled"><a href="javascript:;">Prev</a></li>
-                    <li class="active"><a href="javascript:;">1</a></li>
-                    <li><a href="javascript:;">2</a></li>
-                    <li><a href="javascript:;">3</a></li>
-                    <li><span class="text">...</span></li>
-                    <li><a href="javascript:;"><?=(($total%10)==0) ? ($total/10) : ceil($total/10);?></a></li>
-                    <li><a href="javascript:;">Next</a></li>
+                <ul class="pagination m-t-0 m-b-0" id="paginador">
+
+                <?php
+                if($total > 0)
+                {
+                    $clase = 'active';
+                    echo '<li class="disabled"><a href="javascript:;">Anterior</a></li>';
+                    
+                    $total_pag = floor($total/10);
+                    $total_ind = (floor($total/10) > 5) ? 4 : floor($total/10);
+                    for ($i=0; $i <= $total_ind; $i++) { 
+                        echo '<li id="pg_'.$i.'" class="'.$clase.'"><a href="javascript:;" onclick="pagina_ind('.$i.');">'.($i+1).'</a></li>';
+                        $clase = '';
+                    }
+                   
+                    if($total_pag<5) 
+                        echo '<li class="disabled"><a href="javascript:;">Siguiente</a></li>';
+                    else
+                        echo '<li><a href="javascript:;" onclick="paginador(\'sig\',0,4,'.$total_pag.');">Siguiente</a></li>';
+                }
+
+                ?>
+                    <!--<li><a href="javascript:;"><?=(($total%10)==0) ? ($total/10) : ceil($total/10);?></a></li>-->
+                        
                 </ul>
             </div>
             <!-- end pagination -->
@@ -334,18 +226,46 @@
     <script src="<?=base_url();?>js/apps.min.js"></script>
     <!-- ================== END BASE JS ================== -->
     
-    <script>    
+    <script>
+        var pagina_actual = 0;
+
         $(document).ready(function() {
             App.init();
+            //$('#pg_0').addClass('active');
         });
 
-        function mostrar1(){
-        document.getElementById('cuadricula').style.display = 'block';
-        document.getElementById('lista').style.display = 'none';}
+        function mostrar(tipo_vista) {
+            $.post('<?=base_url();?>C_indicadores/vista_ind',{pagina:pagina_actual,vista:tipo_vista}, function(resp){
+                //console.log(resp);
+                $('#contenedor_indicadores').html(resp);
+            });
+        }
 
-        function mostrar2(){
-        document.getElementById('lista').style.display = 'block';
-        document.getElementById('cuadricula').style.display = 'none';}
+
+        function pagina_ind(pagina) {
+
+            $.post('<?=base_url();?>C_indicadores/pagina_ind', {pagina:pagina}, function(resp){
+                $('#pg_'+pagina_actual).removeClass('active')
+                $('#pg_'+pagina).addClass('active');
+                pagina_actual = pagina;
+                $('#contenedor_indicadores').html(resp);
+                
+                //var result = resp.split('_separador_');
+                //$('#paginador').html(result[1]);
+                //console.log('total propuestas: '+result[2]+'\n total paginas: '+result[3]+'\n pruebas: '+result[4]);
+                //loading.out();
+            });
+        }
+
+        function paginador(op,lim_i,lim_s,total) {
+            if(op=='sig') pagina = pagina_actual+1;
+            if(op=='ant') pagina = pagina_actual-1;
+            $.post('<?=base_url();?>C_indicadores/paginador',{op:op,lim_i:lim_i,lim_s:lim_s,total:total}, function(resp){
+                $('#paginador').empty().html(resp);
+                pagina_ind(pagina);         
+            });
+
+        }
     </script>
 </body>
 </html>

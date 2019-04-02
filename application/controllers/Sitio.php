@@ -23,6 +23,7 @@ class Sitio extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->helper('url');		
+		$this->load->helper('cookie');
 		$this->load->model('M_json');
 		$this->load->model('M_indicadores');
 	}
@@ -92,7 +93,22 @@ class Sitio extends CI_Controller {
 		$pag = 0;
 		$ind = new M_indicadores();		
 		$datos['ind'] = $ind->indicadores($pag);
-		$datos['total'] = $ind->total_ind();
+		$total = $ind->total_ind();
+		$datos['total'] = $total;
+
+		/*
+		$cookie = array(
+			'name' => 'vista_ind',
+			'value' => 'listado',
+			'expire' => time()+86500,
+			'domain' => base_url(),
+			'path' => '/',
+			'prefix' => 'CW_'
+		);
+
+		set_cookie($cookie);
+		*/
+
 		$this->load->view('lista_indicadores',$datos);
 	}
 

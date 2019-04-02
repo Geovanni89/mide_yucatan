@@ -103,7 +103,7 @@
     <pre>
         
 <?php //print_r($datos_json); 
-echo $datos_json; ?>
+//echo $datos_json; ?>
     </pre>
     <!-- begin content -->
     <div class="content">

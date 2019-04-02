@@ -111,6 +111,7 @@
     <script>
         $(document).ready(function() {            
             App.init();
+            window.screen.orientation.unLock;
             giro();
         });
 

@@ -11,6 +11,8 @@ class M_indicadores extends CI_Model {
 
 	public function indicadores($pag=0,$ind=0)
 	{	
+		$lim_inf = 10;
+		$lim_sup = $lim_inf*$pag;
 		$this->db->select('ind.id_indicador,ind.nombre_indicador,ind.id_periodicidad,p.id_periodicidad,p.periodicidad,lb.valor,lb.id_unidadmed,um.id_unidadmed,um.unidad,lb.fecha');
 		$this->db->from('indicadores ind');
 		$this->db->join('linea_base lb','ind.id_indicador = lb.id_indicador','INNER');
@@ -19,7 +21,8 @@ class M_indicadores extends CI_Model {
 		$this->db->where('ind.activo',1);
 		if($ind>0) $this->db->where('ind.id_indicador',$ind);
 		else {
-			if($pag==0) $this->db->limit(10,0);
+			//if($pag==0) $this->db->limit(10,0);
+			$this->db->limit($lim_inf,$lim_sup);
 		}
 
 		$query = $this->db->get();
